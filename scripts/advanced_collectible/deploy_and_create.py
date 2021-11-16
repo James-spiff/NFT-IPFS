@@ -10,7 +10,8 @@ def deploy_and_create():
         get_contract("link_token"),
         config["networks"][network.show_active()]["keyhash"],
         config["networks"][network.show_active()]["fee"],
-        {"from": account}
+        {"from": account},
+        publish_source=config["networks"][network.show_active()].get("verify") #for publishing our code on the blockchain
     )
 
     fund_with_link(advanced_collectible.address)

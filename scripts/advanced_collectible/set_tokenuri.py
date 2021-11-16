@@ -18,7 +18,8 @@ def main():
             print(f"Setting tokenURI of {token_id}")
             set_tokenURI(token_id, advanced_collectible, dog_metadata_dict[breed])
 
-    
+
+#Here we make our NFT visible in an NFT marketplace   
 def set_tokenURI(token_id, nft_contract, tokenURI):
     account = get_account()
     tx = nft_contract.setTokenURI(token_id, tokenURI, {"from": account})

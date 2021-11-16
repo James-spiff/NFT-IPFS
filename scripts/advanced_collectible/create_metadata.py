@@ -46,3 +46,5 @@ def upload_to_ipfs(filepath):
         image_uri = f"https://ipfs.io/ipfs/{ipfs_hash}?filename={filename}"
         print(image_uri)
         return image_uri
+
+#After this we upload it to an NFT marketplace like OpenSea in set_tokenuri.py

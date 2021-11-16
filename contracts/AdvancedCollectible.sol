@@ -18,7 +18,7 @@ contract AdvancedCollectible is ERC721, VRFConsumerBase {
     event breedAssigned(uint256 indexed tokenId, Breed dog_breed);
 
     constructor(address _vrfCoordinator, address _linkToken, bytes32 _keyhash, uint256 _fee) public VRFConsumerBase(_vrfCoordinator, _linkToken) ERC721("Dogo", "DOG") {
-        tokenCounter = 0;
+        tokenCounter = 0;   //tokenCounter counts all the tokens you have deployed under this contract
         keyhash = _keyhash;
         fee = _fee;
     }
